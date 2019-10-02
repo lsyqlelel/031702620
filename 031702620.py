@@ -47,7 +47,9 @@ def address_1():
 addr_0 = s[0:2]
 data = ['北京', '上海', '天津', '重庆']
 if (addr_0 in data):
-    result.append(s[0:2]);s = re.sub(s[0:2],'',s,1)
+    result.append(s[0:2])
+    if (s[2:4] in data):
+        s = re.sub(s[0:2],'',s,1)
 else:
     address_1()
 
